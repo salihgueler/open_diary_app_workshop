@@ -474,4 +474,4 @@ class HighlightsView extends StatelessWidget {
 }
 ```
 
-With these pages, now you have upload and read operations for your images as well. Next we can deploy this.
+With these pages, now you have upload and read operations for your images as well. Next we can [deploy this](https://github.com/salihgueler/open_diary_app_workshop/blob/main/6_deploy_backend_hosting.md).
