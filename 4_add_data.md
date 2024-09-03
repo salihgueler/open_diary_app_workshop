@@ -260,6 +260,24 @@ class _OpenDiaryAppHomePageState extends State<OpenDiaryAppHomePage> {
 }
 ```
 
+Lastly, update the `MainApp` in _main.dart_ like the following:
+```dart
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Authenticator(
+      child: MaterialApp(
+        builder: Authenticator.builder(),
+        home: const Scaffold(
+          body: OpenDiaryAppHomePage(),
+        ),
+      ),
+    );
+  }
+}
+```
 Before we add the creation and details, we should [add storage capabilities](https://github.com/salihgueler/open_diary_app_workshop/blob/main/5_add_storage.md).
 
 
