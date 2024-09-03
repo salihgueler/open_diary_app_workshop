@@ -13,3 +13,5 @@ If you run your application now by running the following command, you will see t
 ```
 flutter run -d chrome
 ```
+
+Now it is time to [create the Amplify Project](https://github.com/salihgueler/open_diary_app_workshop/blob/main/2_create_amplify_project.md)
