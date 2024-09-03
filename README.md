@@ -9,4 +9,4 @@ In this step by step workshop, you will learn how to create a Simple Diary appli
 
 **Please be sure to use the AWS Accounts provisioned for you.**
 
-Start by creating the project step.
+Start by [creating the project step](https://github.com/salihgueler/open_diary_app_workshop/blob/main/1_create_flutter_project.md).
