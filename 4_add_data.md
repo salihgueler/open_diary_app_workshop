@@ -53,6 +53,34 @@ npx ampx generate graphql-client-code --format modelgen --model-target dart --ou
 
 This will generate models for us.
 
+
+And add a _extensions.dart_ file for having an extension on top of the generated Entry moods so we can directly map it to icons:
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:open_diary_app/models/Entry.dart';
+import 'package:open_diary_app/models/EntryMood.dart';
+
+extension EntryExtensions on Entry {
+  IconData toIconData() {
+    switch (mood) {
+      case EntryMood.veryBad:
+        return Icons.sentiment_very_dissatisfied;
+      case EntryMood.bad:
+        return Icons.sentiment_dissatisfied;
+      case EntryMood.okay:
+        return Icons.sentiment_neutral;
+      case EntryMood.good:
+        return Icons.sentiment_satisfied;
+      case EntryMood.veryGood:
+        return Icons.sentiment_very_satisfied;
+      default:
+        return Icons.not_accessible;
+    }
+  }
+}
+```
+
 > You can add the models to the analysis_options.yml file to exclude it from Dart analysis.
 
 Next update the `_configureAmplify` function like the following:
