@@ -11,6 +11,24 @@ export const storage = defineStorage({
 });
 ```
 
+Update your backend.ts file like the following:
+
+```ts
+import { defineBackend } from "@aws-amplify/backend";
+import { auth } from "./auth/resource";
+import { data } from "./data/resource";
+import { storage } from "./storage/resource";
+
+/**
+ * @see https://docs.amplify.aws/react/build-a-backend/ to add storage, functions, and more
+ */
+defineBackend({
+  auth,
+  data,
+  storage,
+});
+```
+
 With the code below, you define a bucket for your images and give access rights to folders based on authentication state. If you don't give any access rights, the bucket will be in hidden state for users.
 
 For using the storage in your application, you will first add the library to your _pubspec.yaml_ file:
