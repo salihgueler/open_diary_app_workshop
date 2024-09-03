@@ -16,4 +16,11 @@ npx ampx sandbox --outputs-format dart --outputs-out-dir lib
 
 This will deploy your backend with actual cloud resources with a disposable matter.
 
-Once you see a message like the following, you are ready to move on.
+Once you successfully deploy it, you can delete it by running the following:
+
+```bash
+npx ampx sandbox delete
+```
+
+Next step is to [add authentication](https://github.com/salihgueler/open_diary_app_workshop/blob/main/3_add_authentication.md).
+
