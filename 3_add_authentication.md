@@ -37,14 +37,14 @@ npx ampx sandbox --outputs-format dart --outputs-out-dir lib
 
 For adding the frontend part, you have to add the frontend libraries to the pubspec.yaml file and run `flutter pub get`:
 
-:::code{showCopyAction=true showLineNumbers=false language=yaml}
+```yaml
 dependencies:
   flutter:
     sdk: flutter
   amplify_flutter: ^2.4.1
   amplify_auth_cognito: ^2.4.1
   amplify_authenticator: ^2.1.3
-:::
+```
 
 You added the `amplify_flutter` for core functionality usages, `amplify_auth_cognito` for authentication configuration and `amplify_authenticator` to have easy to use authentication flow with a single line of code. 
 
